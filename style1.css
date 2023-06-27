@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300;1,500&family=Special+Elite&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* ######################  html element styling ########################### */
+html{
+    font-size:62.5%; /*font size is 10 px (100/16)*10 */ 
+
+}
+
+ul li{
+    list-style: none;
+}
+a{
+    font-size: 1.6rem; /*size 16px*/
+    text-decoration: none; /*for remover underline frm link*/
+}
+p, li{
+    font-size: 1.6rem;
+    margin-bottom:0.5em; /*margine is 8px beacasue it inherit from parent*/
+    letter-spacing: 0.15em;
+}
+h1, h2, h3{
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ################## utility classes ################# */
+
+.container{
+     max-width: 1200px; /*scroll bar nhi aye ga */
+    width: 90%; /*left right me space rhy ga*/
+    margin: 0 auto; /*center me krny k liye*/
+}
+.lg-heading{
+    font-size:3.5rem;
+}
+
+.md-heading{
+  font:size 2.2em;
+}
+
+.text-red{
+    color: #e63946;
+}
+.text-light{
+    color: #f4f4f4;
+}
+.text-black{
+    color: #333333;
+}
+.text-gray{
+    color: #555555;
+}
+
+.btn{ 
+    display: inline-block;
+    padding:0.5em 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin:0.5em 0;
+    
+}
+.btn-primary {
+    border-color: 2px solid red;
+    color:red;
+    border-radius:130px;
+    background-color: #e8e2e2;
+    
+}
+.btn-primary:hover {
+    background-color:#e8e2e2;
+}
+.btn-secondary {
+    border: 2px solid red;
+    color:red;
+    border-radius:130px;
+}
+.btn-secondary:hover {
+    background-color:#fcfcfc;
+}
+.bg-dark{
+    background-color:#263238 ;
+
+}
+
+ /* ################# header styling #################  */
+.header{
+    position: relative;
+    height: 95vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , /*for dark background*/ url('../img/header-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.navbar{
+    
+    padding:1rem;
+}
+.navbar a:link,
+.navbar a:visited{
+    color: #f4f4f4;
+}
+a{
+    padding-bottom: 0.3rem;
+}
+.navbar a:hover{
+    border-bottom: 1px solid white; 
+}
+.navbar .logo{
+    float:left;
+    font-size:3.5rem;
+}
+.navbar .nav-items{
+   
+    float:right;
+    margin-top: 1rem;
+}
+.navbar .nav-item{
+    display:inline-block;
+    padding:1rem;
+    text-transform: uppercase;
+}
+.clearfix{
+    clear:both;
+}
+
+.header-content h1{
+    text-transform: uppercase;
+    font-weight: 700;
+    
+}
+.header-content p{
+    text-transform: uppercase;
+    
+
+}
+.header-content{
+    position: absolute;
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ############ showcase section styling ############# */
+.showcase{
+    background-color:#dddddd;
+    padding:10rem 0;
+    
+}
+
+.row{
+    height: 350px;
+    background-color: #fff;
+    box-shadow:0px 0px 20px 0px #aaa;
+
+}
+
+.row1 {
+    margin-bottom:10rem;
+    
+    
+   
+}
+.row1 .img-box, .row2 .text-box{
+    float:left;
+    width:50%;
+}
+.row2 .img-box, .row1 .text-box{
+    float:right ;
+    width:50%;
+}
+.row .img-box{
+    
+    height: 100%;
+}
+.row .text-box{
+    
+    padding:3rem;
+}
+.row .img-box img{
+    display: inline-block;
+    width: 100%; /*yani apny parent k acording width ly*/
+    height: 100%;
+    object-fit: cover; /*aspect ratio khrab ni huga*/
+}
+.row::after{
+    content :'';
+      display : block;
+    clear: both;
+
+}
+
+/* ############## features section styling ############## */
+.features{
+    padding:10rem 0;
+}
+.box-wrapper {
+ box-shadow: 0 0 20 0 #aaa;
+ 
+
+}
+.box{
+    width:33.33%;
+    float:left;
+    padding:2rem;
+    text-align: center;
+}
+.box-1, .box-3 {
+    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+    color:lightgray;
+    height: 250px;
+
+    
+}
+.box-2{
+    background-image: radial-gradient( circle farthest-corner at 9.2% 43.4%,  rgba(0,0,0,1) 0%, rgba(175,0,123,1) 100.2% );
+    color: #f4f4f4;
+    height: 250px;
+}
+
+.box-wrapper::after {
+    content:"";
+    display:block;
+    clear:both;
+
+}
+
+/* ########## footer section styling ########### */
+
+.footer {
+    
+    padding:2rem 0;
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    
+}
+.footer-content {
+    margin:2rem;
+}
+
+/* ################# about page styling ############# */
+.about{
+    padding: 5rem 0;
+}
+.about2::after{
+    content: "";
+    display : block;
+    border-bottom: 5px solid red;
+    padding-bottom:1rem;
+}
+
+/* ############## about wrapper styling ############### */
+.about-wrapper{
+   
+    text-align:center;
+    margin-top:2rem;
+   padding-right: 20rem;
+}
+.about-wrapper .left{
+    float:left;
+    width:50;
+
+}
+.about-wrapper .left{
+    float:right;
+    width:50;
+}
+.about-wrapper::after{
+    content: "";
+    display : block;
+    clear: both;
+   
+}
+
+
+.about-wrapper li::before{
+    content: "\2713"; /* for applying ticks*/
+    color:red;
+}
+
+/* ############# counts styling ############# */
+.counts{
+  
+    text-align: center;
+    margin-top:3rem;
+}
+
+.count-item1{
+    width:25%;
+    float: left;
+
+}
+.count-item2{
+    width:25%;
+    float: left;
+    
+}
+.count-item3{
+    width:25%;
+    float: left;
+    
+}
+.count-item4{
+    width:25%;
+    float: left;
+    
+}
+.counts::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.count-item span{
+    font-size:3rem;
+    font-weight:bold;
+}
+
+
+/* ############### raech us styling ############# */
+
+.reach-us{
+    
+    text-align: center;
+    height:70px;
+    margin-top:3rem;
+    padding-top:2rem;
+    background-image: linear-gradient( 111.2deg,  rgba(232,5,5,1) 1.7%, rgba(245,49,191,1) 98.7% );
+    color:white;
+}
+.c-btn{
+    border:4px solid white;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    font-size:3rem;
+    padding:0.3rem 2.5em;
+    text-transform: uppercase;
+   
+
+}
+.reach{
+    width:60%;
+    float:left;
+}
+.reach-contact{
+    width:40%;
+    float:right;
+}
+.reach-us::after{
+    content:"";
+    display:block;
+    clear:both;
+
+}
+
+/* ########### contact page styling ######### */
+.contact-form{
+    padding:5rem 0;
+   background:#f7f7f7;
+}
+.form-wrapper .company-address{
+    background:#fff;
+    width:49%;
+    float:left;
+    padding:1rem;
+    height:685px;
+}
+.form-wrapper .company-address i{
+    display:inline-block;
+    margin-right:1rem;
+}
+.form-wrapper .company-address h2{
+    display:inline-block;
+    text-transform: uppercase;
+}
+.form-wrapper .address-group{
+    margin-bottom:3rem;
+}
+.form-wrapper .company-address img{
+    max-width:90%;
+    min-height:40rem;
+    object-fit: cover;
+    object-position: right;
+    padding-top: 7rem;
+}
+
+
+
+
+
+
+
+
+/* ################# form style ################# */
+
+
+/* .form{
+    font-size: 1.6rem;
+    background:#fff;
+} */
+.form-wrapper .form{
+    font-size: 1.6rem;
+    background:#fff;
+    width:49%;
+    float:right;
+    padding:1rem;
+}
+.form-wrapper::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.form h1::after{
+    content: "";
+    display: block;
+    border-bottom: 6px solid #ee4758;
+    width: 100%;
+}
+
+.form-wrapper .form label{
+    display: block;
+}
+.form-wrapper .form input{
+    padding:0.5rem;
+    width: 100%;
+}
+.form-wrapper .form .form-group{
+    margin-bottom:1.2rem;
+} 
+.form-wrapper .form label::after{
+    content: "* ";
+    color:#e62946;
+}
+.form-wrapper .form textarea{
+    width:100%;
+    height:300px;
+    padding:1rem;
+}
+.form-btn{
+    display:block;
+    margin:0 auto; 
+    padding: 0.5em 3em;
+    font-size:1.8rem;
+    text-transform: uppercase;
+    background:#e63946;
+    color:#fff;
+    outline:none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ###################### media queries##################### */
+
+@media (max-width: 500px){
+  html{
+    /* font-size:8px; */
+    font-size: 50%;
+  }
+  .navbar .nav-items, .navbar .logo{
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .row{
+    height: auto;
+    width: 100%;
+  }
+  .row .img-box,
+  .row .text-box {
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+  .features .box{
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .features .box-2,
+  .features .box-3{
+    margin-top:7rem;
+  } 
+  .reach,
+  .reach-contact{
+    float:none;
+    width:100%;
+    text-align: center;
+  }
+  .left,
+  .right{
+    float:none;
+    width:100%;
+    text-align: center;
+  }
+ .form-wrapper .company-address{
+    float:none;
+    width:100%;
+    height:auto ;
+    margin-bottom: 5rem;
+ }
+ .form-wrapper .form{
+    float:none;
+    width:100%;
+    height:auto ;
+    margin-bottom: 5rem;
+ }
+ 
+
+
+}
+@media (orientation: landscape)and (max-height:500px) {
+    .header{
+        height:90vmax;
+    }
+    
+}
